@@ -43,7 +43,6 @@ public class ProductController {
     public String deleteProduct(@PathVariable int productId){
         service.deleteProduct(productId);
         return  "Deleted one product.";
-
     }
 
 }
