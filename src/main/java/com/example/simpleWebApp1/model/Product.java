@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 @Component
 @Entity
-public class Products {
+public class Product {
     @Id
     private int productId;
     private String productName;
@@ -36,11 +36,11 @@ public class Products {
     }
 
 
-    public Products(int productId, String productName, int price) {
+    public Product(int productId, String productName, int price) {
         this.productId = productId;
         this.productName = productName;
         this.price = price;
     }
-    public Products(){
+    public Product(){
     }
 }
