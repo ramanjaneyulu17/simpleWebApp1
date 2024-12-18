@@ -1,6 +1,6 @@
 package com.example.simpleWebApp1.controller;
 
-import com.example.simpleWebApp1.model.Product;
+import com.example.simpleWebApp1.model.Productz;
 import com.example.simpleWebApp1.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,23 +19,23 @@ public class ProductController {
      ProductService service;
 
     @GetMapping("/product")
-    public List<Product> getProducts(){
+    public List<Productz> getProducts(){
         return service.getProducts();
     }
 
     @GetMapping("/product/{productId}")
-    public Product getProductsById(@PathVariable int productId){
+    public Productz getProductsById(@PathVariable int productId){
         return service.getProductById(productId);
     }
 
     @PostMapping("/product")
-    public void addProduct(@RequestBody Product product){
-        service.addProduct(product);
+    public void addProduct(@RequestBody Productz productz){
+        service.addProduct(productz);
     }
 
     @PutMapping("/product")
-    public String  updateProduct(@RequestBody Product product){
-        service.updateProduct(product);
+    public String  updateProduct(@RequestBody Productz productz){
+        service.updateProduct(productz);
         return "Updated the product.";
     }
 
